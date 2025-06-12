@@ -28,7 +28,7 @@ def splitPdfFile(up):# splitting the pdf file into chunks
     splitter = CharacterTextSplitter(chunk_size=2000, chunk_overlap=500)
     chunks = splitter.split_documents(data)  
     return chunks
-os.environ["GROQ_API_KEY"]="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"
+os.environ["GROQ_API_KEY"]="your_api_key"
 llm=ChatGroq(                   # setting up the model
     api_key=os.environ.get("GROQ_API_KEY"),
     model='meta-llama/llama-4-maverick-17b-128e-instruct',
